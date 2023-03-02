@@ -30,12 +30,13 @@ to talk with about language design and implementation issues._
       - [ ] `src/main/scala/piconot/internal/RightHand.scala`
     - [ ] Describe your implementation process in `evaluation.md`
   - [ ] Implement your new syntax as an external DSL, using parser combinators
+    - [ ] Add files, as needed, to implement your syntax
     - Include at least two example programs
       - [ ] `src/main/scala/piconot/external/Empty.bot`
       - [ ] `src/main/scala/piconot/external/RightHand.bot`
     - [ ] Provide instructions for how to run piconot in `build.md`
     - [ ] Describe your implementation process in `evaluation.md`
-- [ ] Critique another team's design and implementation
+- [ ] Give feedback on another design and implementation
 
 ## Warm-up: Picobot
 
@@ -72,7 +73,16 @@ shouldn't need to do anything special with the library to build and run your cod
 
 ## Building and running the code
 
-**Warning:** If you are running the code on your own machine, you may need to install a
+### Running the provided program
+
+In `src/main/scala/piconot/EmptyAPI.scala`, you will find a program that uses the Picobot
+library to create rules that solve the "empty room" problem. You can run this program
+by running `sbt run` in the root directory of the project. A text-based simulation will
+run in the terminal.
+
+### Warning: Running on your own machine
+
+If you are running the code on your own machine, you may need to install a
 few things. This provided code has a graphical version of a running program. The graphics
 rely on a Java library called JavaFX. If this library is not installed on your machine,
 then you will get a runtime error. To fix it, you might:
