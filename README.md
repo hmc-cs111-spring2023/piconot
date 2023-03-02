@@ -99,13 +99,20 @@ Include at least two sample programs.
 
 For the internal version, include the files:
 
-1. `src/main/scala/piconot/internal/Empty.bot`: a program in your internal
+1. `src/main/scala/piconot/internal/Empty.scala`: a program in your internal
    DSL that can solve the empty room. A file that describes an empty room is in
    `resources/empty.txt`.
 
-2. `src/main/scala/piconot/internal/RightHand.bot`: a program in your
+2. `src/main/scala/piconot/internal/RightHand.scala`: a program in your
    internal DSL that uses the right-hand rule to solve the maze in
    `resources/maze.txt`.
+
+### Provide instructions for building and running your internal DSL
+
+In the `build.md` file provide instructions for how to run your internal DSL. (For
+example, `sbt run-main <classname>`) Ask for help if you're not sure how do so!
+
+**Make sure the build process works before your final submission!**
 
 ## Syntax implementation: external DSL
 
