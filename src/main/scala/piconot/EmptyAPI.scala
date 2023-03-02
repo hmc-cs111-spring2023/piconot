@@ -1,5 +1,3 @@
-package piconot.internal
-
 import picolib._
 import picolib.maze._
 import picolib.semantics._
@@ -97,6 +95,3 @@ val rules = List(
 
 // text-based simulation
 object EmptyText extends TextSimulation(emptyMaze, rules)
-
-// GUI simulation
-// object EmptyGUI extends GUISimulation(emptyMaze, rules)
