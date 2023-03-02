@@ -73,30 +73,10 @@ shouldn't need to do anything special with the library to build and run your cod
 
 ## Building and running the code
 
-### Running the provided program
-
 In `src/main/scala/piconot/EmptyAPI.scala`, you will find a program that uses the Picobot
 library to create rules that solve the "empty room" problem. You can run this program
 by running `sbt run` in the root directory of the project. A text-based simulation will
 run in the terminal.
-
-### Warning: Running on your own machine
-
-If you are running the code on your own machine, you may need to install a
-few things. This provided code has a graphical version of a running program. The graphics
-rely on a Java library called JavaFX. If this library is not installed on your machine,
-then you will get a runtime error. To fix it, you might:
-
-- Match the version of ScalaFX to your Java version.
-- Install [JavaFX] on your computer (preferred option, but don't spend a lot of
-  time if it's not easy to install)
-- Remove the graphics elements from the project and just use the text-based
-  runner. To do so, in `build.sbt`, there is a dependency on the picolib library.
-  Change the URL to be:
-  ```
-  https://github.com/hmc-cs111-spring2023/picolib.git#no-graphics
-  ```
-  Then, quit and restart sbt (or run `reload` in the sbt console).
 
 ## Syntax implementation: internal DSL
 
