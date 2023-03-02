@@ -1,15 +1,28 @@
-name := "piconot" // you can change this!
+val scala3Version = "3.2.2"
 
-version := "1.0"
+ThisBuild / version := "0.1.0-SNAPSHOT"
+ThisBuild / scalaVersion := scala3Version
+ThisBuild / scalacOptions ++= Seq(
+  "-deprecation",
+  "-explain",
+  "-language:implicitConversions",
+  "-language:postfixOps"
+)
 
-scalaVersion := "2.11.8"
+ThisBuild / libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.9" % Test
+ThisBuild / libraryDependencies += "org.scalacheck" %% "scalacheck" % "1.15.4" % Test
+ThisBuild / libraryDependencies += "org.scalafx" %% "scalafx" % "18.0.1-R28"
+lazy val picolib = RootProject(
+  uri("https://github.com/hmc-cs111-spring2023/picolib.git")
+)
 
-libraryDependencies ++= 
-  Seq( "org.scalactic" %% "scalactic" % "3.0.0",
-       "org.scalatest" %% "scalatest" % "3.0.0" % "test",
-       "org.scalacheck" %% "scalacheck" % "1.12.5" % "test",
-       "org.scalafx" % "scalafx_2.11" % "8.0.5-R5",
-       "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4",
-       "org.scala-lang" % "scala-compiler" % scalaVersion.value )
+lazy val root = project
+  .settings(
+    name := "Piconot" // you can change this to be the name of your language
+  )
+  .in(file("."))
+  .dependsOn(picolib)
 
-unmanagedClasspath in (Compile, runMain) += baseDirectory.value / "resources"
+// So that we can run GUI apps multiple times from a single sbt session
+// https://github.com/scalafx/scalafx/issues/361
+fork := true
