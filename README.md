@@ -1,5 +1,5 @@
 [picobot]: https://www.cs.hmc.edu/twiki/bin/view/CS5/PicobotProgrammingGold
-[api]: http://www.cs.hmc.edu/courses/2016/fall/cs111/picolib/index.html#package
+[api]: https://hmc-cs111-spring2023.github.io/docs/picolib/
 [javafx]: https://gluonhq.com/products/javafx/
 [emptyfile]: https://d1b10bmlvqabco.cloudfront.net/attach/ijjfckl6old4zz/hku6eqiwn313j8/il5k6nm8w0yk/empty.txt
 [parsercombinatorresource]: http://bitwalker.org/posts/2013-08-10-learn-by-example-scala-parser-combinators/
