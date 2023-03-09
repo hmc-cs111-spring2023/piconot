@@ -175,7 +175,8 @@ trait][parsercombinatorresource] may be helpful.
 
 ## Peer-review
 
-Comment on another design and implementation. You should look through
+Comment on [another](https://github.com/hmc-cs111-spring2023/piconot/wiki/Peer-review) 
+design and implementation. You should look through
 their grammars, pay special attention to their `design.md` and `evaluation.md`
 files, their internal DSL and their parser. You might consider the following
 questions:
